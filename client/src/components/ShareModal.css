@@ -1,0 +1,107 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 450px;
+  padding: 32px;
+  border-radius: 24px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.modal-header h3 {
+  font-size: 1.25rem;
+}
+
+.modal-header button {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+}
+
+.share-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 12px;
+}
+
+.input-group input {
+  background: transparent;
+  border: none;
+  color: white;
+  width: 100%;
+  outline: none;
+}
+
+.share-submit-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.modal-message {
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.modal-message.success { color: var(--success); }
+.modal-message.error { color: var(--error); }
+
+.shared-users h4 {
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+  color: var(--text-secondary);
+}
+
+.shared-users ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.shared-users li {
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 0.85rem;
+}
+
+.no-users {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}

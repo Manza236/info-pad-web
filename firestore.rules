@@ -1,0 +1,18 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /notes/{noteId} {
+      // Allow user to read if they own the note or if it's shared with them
+      allow read: if request.auth != null && (
+        resource.data.userId == request.auth.uid || 
+        request.auth.token.email in resource.data.sharedWith
+      );
+      
+      // Allow any authenticated user to create a note
+      allow create: if request.auth != null;
+      
+      // Only the owner can update or delete
+      allow update, delete: if request.auth != null && resource.data.userId == request.auth.uid;
+    }
+  }
+}

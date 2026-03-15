@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+dist/
+build/
+.DS_Store
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Firestore Service Account
+server/serviceAccountKey.json
+
+# IDE
+.vscode/
+.idea/
